@@ -1,21 +1,55 @@
-/*Reset*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*Default*/
 html{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 62.5%;
 }
 
 body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
-  height: 100vh;
   overflow: hidden;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+small {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.love-me {
+  height: 44rem;
+  width: 30rem;
+  background: url('https://source.unsplash.com/440x300/?') center center/cover no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 1.4rem 2.8rem rgb(0, 0, 0, 0.25), 0 1rem 1rem rgb(0, 0, 0, 0.22);
+  border-radius: 1rem;
+}
+
+.love-me .fa-heart {
+  position: absolute;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
 }
